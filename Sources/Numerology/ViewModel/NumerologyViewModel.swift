@@ -19,6 +19,10 @@ public class NumerologyViewModel {
         calculateNumeroNumber(digits, reduceMasterNumber: isMasterNumberReduced)
     }
     
+    public var prediction: String {
+        numberMeanings[numerologyNumber] ?? "Unknown"
+    }
+    
     public init() {
         digits = Array(repeating: 0, count: maxDigits)
     }
