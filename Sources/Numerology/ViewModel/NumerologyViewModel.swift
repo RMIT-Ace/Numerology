@@ -12,6 +12,8 @@ public class NumerologyViewModel {
     
     public var maxDigits = 4 {
         willSet {
+            guard newValue > 0 else { return }
+            guard newValue < 8 else { return }
             digits = Array(repeating: 0, count: newValue)
         }
     }
