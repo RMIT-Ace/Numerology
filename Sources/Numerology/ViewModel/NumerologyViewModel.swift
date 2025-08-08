@@ -17,7 +17,7 @@ public class NumerologyViewModel {
     public var digits: Array<Int> = .init()
     
     public init() {
-        //
+        digits = Array(repeating: 0, count: maxDigits)
     }
     
 }
