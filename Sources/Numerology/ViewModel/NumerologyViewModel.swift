@@ -10,7 +10,11 @@ import Foundation
 @Observable
 public class NumerologyViewModel {
     
-    var maxDigits = 4
+    public var maxDigits = 4 {
+        willSet {
+            digits = Array(repeating: 0, count: newValue)
+        }
+    }
     
     public var digits: Array<Int> = .init()
     public var isMasterNumberReduced: Bool = false
