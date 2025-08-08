@@ -33,4 +33,8 @@ public class NumerologyViewModel {
         digits = Array(repeating: 0, count: maxDigits)
     }
     
+    public func resetAllDigits() {
+        digits = Array(repeating: 0, count: maxDigits)
+    }
+    
 }
