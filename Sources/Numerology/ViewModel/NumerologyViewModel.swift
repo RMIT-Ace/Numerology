@@ -12,9 +12,12 @@ public class NumerologyViewModel {
     
     var maxDigits = 4
     
-    public var numerologyNumber: Int = 0
-    
     public var digits: Array<Int> = .init()
+    public var isMasterNumberReduced: Bool = false
+    
+    public var numerologyNumber: Int {
+        calculateNumeroNumber(digits, reduceMasterNumber: isMasterNumberReduced)
+    }
     
     public init() {
         digits = Array(repeating: 0, count: maxDigits)
