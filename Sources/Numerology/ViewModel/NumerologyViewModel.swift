@@ -11,10 +11,10 @@ import Foundation
 public class NumerologyViewModel {
     
     public var maxDigits = 4 {
-        willSet {
-            guard newValue > 0 else { return }
-            guard newValue < 8 else { return }
-            digits = Array(repeating: 0, count: newValue)
+        didSet {
+            guard maxDigits > 0 else { maxDigits = 0; return }
+            guard maxDigits < 8 else { maxDigits = oldValue; return }
+            digits = Array(repeating: 0, count: maxDigits)
         }
     }
     

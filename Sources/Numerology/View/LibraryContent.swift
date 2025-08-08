@@ -7,7 +7,6 @@
 
 import SwiftUI
 import DeveloperToolsSupport
-import Numerology
 
 struct MyNumeroViewsLibrary: @MainActor LibraryContentProvider {
     @MainActor
