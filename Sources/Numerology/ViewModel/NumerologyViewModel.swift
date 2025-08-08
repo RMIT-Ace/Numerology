@@ -12,7 +12,7 @@ public class NumerologyViewModel {
     
     public var maxDigits = 4 {
         didSet {
-            guard maxDigits > 0 else { maxDigits = 0; return }
+            guard maxDigits > 0 else { maxDigits = oldValue; return }
             guard maxDigits <= 8 else { maxDigits = oldValue; return }
             digits = Array(repeating: 0, count: maxDigits)
         }
