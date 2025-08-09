@@ -8,7 +8,10 @@
 import SwiftUI
 import DeveloperToolsSupport
 
+let PlaceholderDigits = Array<Int>(repeating: 0, count: 15)
+
 struct MyNumeroViewsLibrary: @MainActor LibraryContentProvider {
+
     @MainActor
     var views: [LibraryItem] {
         LibraryItem(
@@ -24,6 +27,11 @@ struct MyNumeroViewsLibrary: @MainActor LibraryContentProvider {
         LibraryItem(
             UpDownNumberPickerView(digit: .constant(0)),
             title: "Numero Up/Down Number Picker",
+            category: .control
+        )
+        LibraryItem(
+            HScrollSectionView(.constant(PlaceholderDigits)),
+            title: "Numero HScroll Section",
             category: .control
         )
     }
