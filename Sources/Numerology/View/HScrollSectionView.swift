@@ -23,7 +23,10 @@ public struct HScrollSectionView: View {
 
     public init(
         _ digits: Binding<Array<Int>>,
-    cellView: @escaping (_ digit: Binding<Int>) -> any View = { _ in EmptyView() },
+        cellView: @escaping (_ digit: Binding<Int>) -> any View = { digit in
+            let strValue = "\(digit)"
+            return Text(strValue)
+        },
         header: @escaping () -> any View = { EmptyView() },
         footer: @escaping () -> any View = { EmptyView() }
     ) {
