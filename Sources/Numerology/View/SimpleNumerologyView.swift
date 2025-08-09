@@ -11,6 +11,8 @@ import SwiftUI
 public struct SimpleNumerologyView: View {
     @Environment(NumerologyViewModel.self) var vm
     
+    public init() { }
+    
     public var body: some View {
         @Bindable var vm = vm
         List {
