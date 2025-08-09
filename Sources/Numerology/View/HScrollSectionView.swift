@@ -24,7 +24,7 @@ public struct HScrollSectionView: View {
     public init(
         _ digits: Binding<Array<Int>>,
         cellView: @escaping (_ digit: Binding<Int>) -> any View = { digit in
-            let strValue = "\(digit)"
+            let strValue = "\(digit.wrappedValue)"
             return Text(strValue)
         },
         header: @escaping () -> any View = { EmptyView() },
