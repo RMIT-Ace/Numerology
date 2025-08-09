@@ -15,7 +15,7 @@
 
 import SwiftUI
 
-struct HScrollSectionView: View {
+public struct HScrollSectionView: View {
     @Binding var digits: Array<Int>
     var cellView: (_ digit: Binding<Int>) -> any View
     var header: () -> any View
@@ -33,7 +33,7 @@ struct HScrollSectionView: View {
         self.footer = footer
     }
     
-    var body: some View {
+    public var body: some View {
         Section {
             ScrollView(.horizontal) {
                 HStack {
